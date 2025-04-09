@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>CPI Prediction</title>
+</head>
+<body>
+    <h2 style="color: aliceblue;">Enter Store Data for CPI Prediction</h2>
+    <form action="/predict" method="post">
+        <label>Store ID:</label> <input type="number" name="Store" required><br>
+        <label>Store Department:</label> <input type="number" name="Dept" required><br>
+        <label>Temperature:</label> <input type="number" step="0.01" name="Temperature" required><br>
+        <label>Fuel Price:</label> <input type="number" step="0.01" name="Fuel_Price" required><br>
+        <label>Promotion:</label> <input type="number" step="0.01" name="MarkDown1"><br>
+        <label>End-of-summer sale:</label> <input type="number" step="0.01" name="MarkDown2"><br>
+        <label>Coupons:</label> <input type="number" step="0.01" name="MarkDown3"><br>
+        <label>Buy One Get One:</label> <input type="number" step="0.01" name="MarkDown4"><br>
+        <label>MarkDown:</label> <input type="number" step="0.01" name="MarkDown5"><br>
+        <label>Unemployment:</label> <input type="number" step="0.01" name="Unemployment" required><br>
+        <label>Size:</label> <input type="number" name="Size" required><br>
+        <label>Year:</label> <input type="number" name="Year" required><br>
+        <label>Month:</label> <input type="number" name="Month" required><br>
+        <label>Week:</label> <input type="number" name="Week" required><br>
+        <label>Is Holiday (1=Yes, 0=No):</label> <input type="number" name="IsHoliday" required><br>
+        <label>Store Type (0=A, 1=B, 2=C):</label> <input type="number" name="Type" required><br>
+        <label>Store Area Code:</label> <input type="number" name="up" required><br>
+        
+        <button type="submit">Predict CPI</button>
+    </form>
+</body>
+</html>
